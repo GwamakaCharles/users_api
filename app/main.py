@@ -9,7 +9,7 @@ api = Api(app)
 # postgresql://username:password@host:port/database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://hello_flask:hello_flask@db:5432/hello_flask_dev'
 
-from model import db, UserFavs
+from models import db, UserFavs
 
 db.init_app(app)
 with app.app_context():
@@ -92,6 +92,3 @@ def get():
 		red.hset(username, "food", record.food)
 		return render_template('index.html', get=1, msg="(From DataBase)",username=username, place=record.place, food=record.food)
 	return render_template('index.html',get=1, msg="(From Redis)", username=username, place=user_data[b'place'].decode('utf-8'), food=user_data[b'food'].decode('utf-8'))
-
-# Return a user
-api.add_resource(Users, '/user')
