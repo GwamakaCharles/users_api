@@ -9,7 +9,7 @@ api = Api(app)
 # postgresql://username:password@host:port/database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://hello_flask:hello_flask@db:5432/hello_flask_dev'
 
-from models import db, UserFavs
+from models import db
 
 @app.before_first_request
 def create_tables():
