@@ -49,7 +49,7 @@
 			"essential": true,
 			"links": ["redis", "db"],
 			"name": "web",
-			"image": "vagdevik/user-wishlist-app",
+			"image": "gwamaka/users-api:latest",
 			"memory": 100,
 			"portMappings": [
 				{
