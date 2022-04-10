@@ -49,7 +49,7 @@
 			"essential": true,
 			"links": ["redis", "db"],
 			"name": "web",
-			"image": "gwamaka/users-api:latest",
+			"image": "gwamaka/users_api:latest",
 			"memory": 100,
 			"portMappings": [
 				{
